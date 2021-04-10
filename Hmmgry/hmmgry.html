@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- <input id="search"/> -->
+<!-- <button onclick="getrecepe(document.getElementById('search').value)"> Search </button> -->
+<div id="output"></div>
+<a href ="" id="sourceLink"></a>
+
+<script>
+
+function getsource(id){
+$.ajax({
+url:"https://api.spoonacular.com/recipes/random"+id+"/information?apiKey=06969a0e3827430d85de4a1df60c9b5d",
+success: function(res) {
+
+document.getElementById("sourceLink").innerHTML=res.sourceUrl
+document.getElementById("sourceLink").href=res.sourceUrl
+}
+});
+}
+function getrecepe(q){
+$.ajax({
+url:"https://api.spoonacular.com/recipes/search?apiKey=06969a0e3827430d85de4a1df60c9b5d&number=1&query="+q,
+success: function(res) {
+
+document.getElementById("output").innerHTML="<h1>"+res.results[0].title+"</h1><br><img src='"+res.baseUri+res.results[0].image+"' width='400' /><br>Ready in "+res.results[0].readyInMinutes+" minutes"
+getsource(res.results[0].id)
+}
+});
+}
+
+</script>
+
+
+<!-- <script>
+function getsource(id){
+$.ajax({
+url:"https://api.spoonacular.com/recipes/"+id+"/information?apiKey=06969a0e3827430d85de4a1df60c9b5d",
+success: function(res){
+document.getElementById("sourceLink").innerHTML=res.souceUrl
+document.getElementById("sourceLink").href=res.sourceUrl
+}
+});
+}
+
+function getrecepe(q){
+  $.ajax({
+    url:"https://api.spoonacular.com/recipes/search?apiKey=06969a0e3827430d85de4a1df60c9b5d&number=1&query="+q,
+    success: function(res){
+      document.getElementById("output").innerHTML="<h1>"+res.results[0].title+"</h1>  <br>
+        <img src ='"+res.baseUri+res.results[0].image"'width='400'/>  <br>
+        Ready in "+res.results[0].readyInMinutes+"minutes"
+        getsource(res.results[0].id)
+    }
+  });
+} -->
+
+</script>
+
+
+<!-- TO CHANGE BUTTON COLOR -->
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+ <!-- link to our manifest   -->
+ <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+
+<!-- <h2>This is the index.html page</h2> -->
+
+<div class="container">
+<!--   container start -->
+
+  <div ="row-1">
+     <div class="icon">
+  </div>
+  </div>
+
+  <div ="row-2">
+    <h3 class="main-title"> Randomizer </h3>
+  </div>
+
+  <div class="info">
+    <h5 class="title-1">
+      Need a meal idea? We've got your back!
+    </h5>
+    <p>
+      If you like, you can narrow your search below with filters and preferences, then hit the randomizer and find a meal you didn’t even know you were looking for.
+      </p>
+  </div>
+
+  <div  ="row-3">
+    <h5 class="category-title"> WHAT MEAL? </h5>
+
+  <div class="row">
+    <div class="col-sm">
+      Breakfast
+    </div>
+    <div class="col-sm">
+      Lunch
+    </div>
+    <div class="col-sm">
+      Dinner
+    </div>
+  </div>
+
+   <div class="row">
+    <div class="col-sm-filled">
+      Dessert
+    </div>
+    <div class="col-sm">
+      Snack
+    </div>
+  </div>
+      </div>
+
+
+    <div  ="row-4">
+    <h5 class="category-title"> PREP TIME? </h5>
+
+        <div class="row">
+    <div class="col-sm">
+      Quick Bites
+      <h6 class="details"> < 15 min prep </h6>
+    </div>
+    <div class="col-sm">
+      Anything Goes
+       <h6 class="details"> prep doesn't matter </h6>
+    </div>
+  </div>
+  </div>
+
+
+         <div  ="row-5">
+    <h5 class="category-title"> INGREDIENTS? </h5>
+           <input type="search"  placeholder="Search" id="search">
+      </div>
+
+
+      <div class = "row-6">
+
+        <!-- if I take out the a tag the recipe appears at the top of the screen.
+        I want to have the page change and the recipe appear on that page. -->
+
+
+        <button onclick="getrecepe(document.getElementById('search').value)" class="randomizer" >
+  <a href="results.html" target="_self"> </a>
+  </button>
+
+
+
+      </div>
+
+
+<!--   container end -->
+</div>
+
+
+
+
+</body>
+<!-- <script type="text/javascript" src="index.js">
+</script> -->
+</html>

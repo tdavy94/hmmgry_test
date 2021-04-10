@@ -1,0 +1,268 @@
+html, body {
+  height: 100%;
+}
+img {
+  max-width: 100%;
+}
+
+.main-container{
+display: flex;
+}
+
+.container{
+background: #351341;
+/* margin: 0 50px; */
+/*   padding: 20px; */
+/* width: 360px; */
+height: 700px;
+/* border-radius: 30px; */
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.icon{
+background: white;
+margin-top: 20px;
+height: 30px;
+width: 30px;
+display: flex;
+border-radius: 50px;
+}
+
+.row-1{
+order: 1;
+}
+
+.main-title{
+color: #956a9c;
+font-size: 16px;
+font-weight: 600;
+}
+
+.info{
+  background: #956a9c30;
+}
+
+.title-1{
+color: #dc9811;
+margin-bottom: -15px;
+padding: 0px 30px 0 30px;
+text-align: center;
+font-size: 11px;
+}
+
+p{
+color: white;
+/*   background: #956a9c25; */
+padding: 20px 45px;
+text-align: center;
+font-size: 11px;
+font-weight: 400;
+line-height: 1.3;
+margin: 0;
+}
+
+.row-2{
+order: 2;
+}
+
+.category-title{
+color: #dc9811;
+margin-bottom: 10px;
+text-align: center;
+}
+
+.row{
+color: white;
+display: flex;
+/*   height: 10%; */
+order: 3;
+justify-content: center;
+/*   flex-grow: 1; */
+}
+
+.row-4{
+order: 6;
+}
+
+.details{
+margin: 5px 0 0 0;
+text-align: center;
+color: #ffffff80;
+font-weight: 300;
+}
+
+.row-5{
+/*   justify-content: flex-start; */
+}
+
+#search{
+background: #2a033a80;
+padding: 15px 100px;
+margin-top: 10px;
+border-radius: 50px;
+border: #956a9c90 2px solid;
+font-weight: 400;
+text-align: center;
+/*   margin-top: 10px; */
+/*   justify-content: flex-start; */
+}
+
+::placeholder {
+color: #956a9c;
+opacity: 1;
+}
+
+input {
+  color: white;
+}
+
+.randomizer{
+background: white;
+/*   align-items: baseline; */
+margin: 30px 0;
+/* padding: 30px 0; */
+height: 80px;
+width: 80px;
+display: flex;
+border-radius: 50px;
+}
+
+.col-sm{
+border: #956a9c90 1px solid;
+border-radius: 7px;
+padding: 10px 20px;
+margin: 10px;
+font-size: 12px;
+/*   flex-grow: 1; */
+}
+
+.col-sm-filled{
+background: #dc9811;
+color: #241332;
+/*   border: #dc9811 1px solid; */
+border-radius: 7px;
+padding: 11px 20px 0px 20px;
+margin: 10px;
+font-size: 12px;
+/*   flex-grow: 1; */
+}
+
+
+/* POPUP SCREEN */
+
+.container-2{
+  background: #351341;
+  margin: 0 50px;
+/*   padding: 20px; */
+  width: 360px;
+  height: 680px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-placeholder{
+ padding: 110px 50px;
+ background: #35134199;
+ border-radius: 30px 30px 0 0;
+}
+
+.row-2-3{
+/*   margin: -10px 0; */
+  display: flex;
+  justify-content: space-between;
+/*   border: 1px solid red; */
+}
+
+.main-title-2{
+  color: #956a9c;
+  font-size: 16px;
+  font-weight: 600;
+  padding-left: 20px;
+  align-self: center;
+/*   border: 1px solid red; */
+}
+
+.stars{
+  align-self: center;
+  padding-right: 20px;
+  color: gold;
+/*   border: 1px solid red; */
+}
+
+.row-2-4{
+  margin: -20px 0;
+  display: flex;
+  justify-content: space-between;
+/*   border: 1px solid red; */
+}
+
+.details-2{
+  color: black;
+  font-size: 12px;
+  font-weight: 600;
+  padding-left: 20px;
+  align-self: center;
+}
+
+.rating-number{
+  font-size: 12px;
+  text-align: right;
+  align-self: center;
+  padding-right: 20px;
+}
+
+.popup-card{
+  background: white;
+  height: 450px;
+  width: 300px;
+  border-radius: 30px 30px 0 0;
+  box-shadow: 7px 0 black;
+}
+
+.popup-nav{
+  margin-top: -20px;
+  background: #351341;
+  height: 100px;
+  width: 300px;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 7px 7px 0 black;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+
+.col-sm-2{
+  border: #956a9c90 1px solid;
+  border-radius: 7px;
+  padding: 10px 20px;
+  margin: 30px 5px;
+  font-size: 12px;
+  color: black
+}
+
+.col-sm-nav{
+  border: #956a9c90 1px solid;
+  border-radius: 7px;
+  padding: 10px 20px;
+  margin: 30px 15px;
+  font-size: 12px;
+}
+
+.col-sm-2-main{
+  border: #956a9c90 1px solid;
+  border-radius: 7px;
+  padding: 10px 20px;
+  margin: 30px 15px;
+  font-size: 12px;
+}
+
+.exit{
+  margin-top: 15px;
+  font-size: 12px;
+  text-decoration: underline;
+}
